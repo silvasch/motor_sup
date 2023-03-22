@@ -1,4 +1,4 @@
-import RPi.GPIO as rpio
+import RPIO as rpio
 
 
 class PinManager:
@@ -18,6 +18,14 @@ class PinManager:
 
     def pin_off(self, name: str):
         rpio.output(self.__pins[name], rpio.LOW)
+
+    def all_on(self):
+        for _, pin in self.__pins:
+            rpio.output(pin, rpio.HIGH)
+
+    def all_off(self):
+        for _, pin in self.__pins:
+            rpio.output(pin, rpio.LOW)
 
     def __del__(self):
         rpio.cleanup()
