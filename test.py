@@ -1,4 +1,4 @@
-import RPIO as rpio
+import RPi.GPIO as rpio
 
 from manager import PinManager
 

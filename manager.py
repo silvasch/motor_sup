@@ -1,4 +1,5 @@
-import RPIO as rpio
+import RPi.GPIO as rpio
+
 
 class PinManager:
     def __init__(self, mode: rpio.BOARD | rpio.BCM):
