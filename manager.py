@@ -1,4 +1,4 @@
-import RPIO as rpio
+import RPi.GPIO as rpio
 
 
 class PinManager:

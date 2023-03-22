@@ -1,4 +1,4 @@
-import RPIO as rpio
+import RPi.GPIO as rpio
 import time
 
 from manager import PinManager
