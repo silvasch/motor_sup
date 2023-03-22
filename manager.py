@@ -20,12 +20,12 @@ class PinManager:
         rpio.output(self.__pins[name], rpio.LOW)
 
     def all_on(self):
-        for _, pin in self.__pins:
-            rpio.output(pin, rpio.HIGH)
+        for name in self.__pins:
+            rpio.output(self.__pins[name], rpio.HIGH)
 
     def all_off(self):
-        for _, pin in self.__pins:
-            rpio.output(pin, rpio.LOW)
+        for name in self.__pins:
+            rpio.output(self.__pins[name], rpio.LOW)
 
     def __del__(self):
         rpio.cleanup()
