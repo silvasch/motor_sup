@@ -5,7 +5,7 @@ from manager import PinManager
 
 
 def main():
-    manager = PinManager(rpio.BOARD)
+    manager = PinManager(rpio.BCM)
     manager.add_pin("led", 2)
     manager.pin_on("led")
     time.sleep(5)
