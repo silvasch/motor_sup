@@ -28,5 +28,5 @@ class PinManager:
             rpio.output(self.__pins[name], rpio.LOW)
 
     def __del__(self):
-        rpio.cleanup()
+        self.all_off()
 
