@@ -1,3 +1,3 @@
-from .controller import Controller
-from .manager import PinManager
 from .motor import Motor
+from .pin import Pin
+from .pin_manager import PinManager
