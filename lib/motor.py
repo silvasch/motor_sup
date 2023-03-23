@@ -5,11 +5,11 @@ from .pin_manager import PinManager
 
 
 class Motor:
-    def __init__(self, data_1: int, data_2: int, enable: int, mode: gpio.BCM | gpio.BOARD = gpio.BCM):
+    def __init__(self, data_1: int, data_2: int, enable: int, frequency: int = 100, mode: gpio.BCM | gpio.BOARD = gpio.BCM):
         self.__pin_manager = PinManager(mode)
         self.__pin_manager.add_pin("data_1", Pin(data_1))
         self.__pin_manager.add_pin("data_2", Pin(data_2))
-        self.__pin_manager.add_pin("enable", Pin(enable, is_pwm=True))
+        self.__pin_manager.add_pin("enable", Pin(enable, is_pwm=True, frequency=frequency))
 
     def forwards(self, velocity: float):
         self.__pin_manager.set_velocity("enable", velocity)
