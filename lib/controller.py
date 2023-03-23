@@ -1,8 +1,4 @@
-import pygame
-
-
 class Controller:
     def __init__(self):
-        pygame.init()
+        pass
 
-    def is_on(self, )

@@ -1,3 +1,3 @@
-from controller import Controller
-from manager import PinManager
-from motor import Motor
+from lib.controller import Controller
+from lib.manager import PinManager
+from lib.motor import Motor
