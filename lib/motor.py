@@ -1,3 +1,5 @@
+import RPi.GPIO as gpio
+
 from .pin import Pin
 from .pin_manager import PinManager
 
