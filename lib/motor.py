@@ -1,4 +1,5 @@
-from . import Pin, PinManager
+from .pin import Pin
+from .pin_manager import PinManager
 
 
 class Motor:
