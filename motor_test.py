@@ -14,7 +14,7 @@ def main():
     time.sleep(3)
     motor.stop()
     time.sleep(2)
-    motor.backwards(25)
+    motor.backwards(1)
     time.sleep(3)
     motor.full_stop()
 
