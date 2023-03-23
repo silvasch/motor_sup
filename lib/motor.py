@@ -9,7 +9,7 @@ class Motor:
         self.__pin_manager = PinManager(mode)
         self.__pin_manager.add_pin("data_1", Pin(data_1))
         self.__pin_manager.add_pin("data_2", Pin(data_2))
-        self.__pin_manager.add_pin("enable", Pin(enable))
+        self.__pin_manager.add_pin("enable", Pin(enable, is_pwm=True))
 
     def forwards(self):
         self.__pin_manager.on("data_1")
