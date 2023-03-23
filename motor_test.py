@@ -10,11 +10,11 @@ def main():
         enable=4,
     )
     
-    motor.forwards()
+    motor.forwards(100)
     time.sleep(3)
     motor.stop()
     time.sleep(2)
-    motor.backwards()
+    motor.backwards(25)
     time.sleep(3)
     motor.full_stop()
 
