@@ -1,7 +1,6 @@
 import RPi.GPIO as rpio
-import time
 
-from lib.manager import PinManager
+from .manager import PinManager
 
 
 class Motor:
