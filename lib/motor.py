@@ -1,5 +1,5 @@
 from .pin import Pin
-from .pwm import PWM, PWN
+from .pwm import PWM
 
 
 class Motor:
