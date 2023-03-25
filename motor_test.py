@@ -11,7 +11,7 @@ def main():
         frequency=100,
     )
     
-    motor.forwards(50)
+    motor.forwards(100)
     time.sleep(3)
     motor.stop()
     time.sleep(2)
