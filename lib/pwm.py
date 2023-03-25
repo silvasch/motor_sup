@@ -1,3 +1,6 @@
+import RPi.GPIO as gpio
+
+
 class PWM:
     def __init__(self, pin_num: int, frequency: int = 100, initial_duty_cycle: int = 0) -> None:
         self.__pin_num = pin_num
