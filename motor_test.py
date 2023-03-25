@@ -1,9 +1,12 @@
+import RPi.GPIO as gpio
 import time
 
 from lib import Motor
 
 
 def main():
+    gpio.setmode(gpio.BCM)
+
     motor = Motor(
         data_1=2,
         data_2=3,
