@@ -8,14 +8,14 @@ def main():
         data_1=2,
         data_2=3,
         enable=4,
-        frequency=20,
+        frequency=100,
     )
     
-    motor.forwards(100)
+    motor.forwards(50)
     time.sleep(3)
     motor.stop()
     time.sleep(2)
-    motor.backwards(1)
+    motor.backwards(50)
     time.sleep(3)
     motor.full_stop()
 
