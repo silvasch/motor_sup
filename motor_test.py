@@ -12,11 +12,11 @@ def main():
     )
     
     motor.forwards(100)
-    time.sleep(3)
+    time.sleep(10)
     motor.stop()
-    time.sleep(2)
-    motor.backwards(50)
-    time.sleep(3)
+    time.sleep(1)
+    motor.forwards(20)
+    time.sleep(10)
     motor.full_stop()
 
 
