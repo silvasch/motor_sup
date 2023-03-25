@@ -7,6 +7,7 @@ class PWM:
         self.__frequency = frequency
         self.__duty_cycle = initial_duty_cycle
 
+        gpio.setup(self.__pin_num, gpio.OUT)
         self.__pwm = gpio.PWM(self.__pin_num, self.__frequency)
 
     def on(self, duty_cycle: float = 100):
