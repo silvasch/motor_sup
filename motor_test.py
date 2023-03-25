@@ -8,7 +8,7 @@ def main():
         data_1=2,
         data_2=3,
         enable=4,
-        frequency=100,
+        frequency=10,
     )
     
     motor.forwards(100)
