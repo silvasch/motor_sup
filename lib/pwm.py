@@ -16,3 +16,6 @@ class PWM:
     def set_duty_cycle(self, duty_cycle: float):
         self.__duty_cycle = duty_cycle
         self.__pwm.ChangeDutyCycle(self.__duty_cycle)
+
+    def __del__(self):
+        gpio.cleanup()
