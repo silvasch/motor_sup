@@ -6,6 +6,7 @@ from lib import Motor
 
 def main():
     gpio.setmode(gpio.BCM)
+    gpio.setwarnings(False)
 
     motor = Motor(
         data_1=2,
@@ -16,6 +17,7 @@ def main():
 
     motor.forwards()
     time.sleep(3)
+    print("Changing")
     motor.change_duty_cylce(20)
     time.sleep(3)
     motor.full_stop()
