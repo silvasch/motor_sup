@@ -11,13 +11,13 @@ class Motor:
         self.__pin_manager.add_pin("data_2", Pin(data_2))
         self.__pin_manager.add_pin("enable", Pin(enable, is_pwm=True, frequency=frequency))
 
-    def forwards(self, velocity: float):
-        self.__pin_manager.set_velocity("enable", velocity)
+    def forwards(self, duty_cycle: float = 100):
+        self.__pin_manager.on("enable", duty_cycle)
         self.__pin_manager.on("data_1")
         self.__pin_manager.off("data_2")
     
-    def backwards(self, velocity):
-        self.__pin_manager.set_velocity("enable", velocity)
+    def backwards(self, duty_cycle: float = 100):
+        self.__pin_manager.on("enable", duty_cycle)
         self.__pin_manager.off("data_1")
         self.__pin_manager.on("data_2")
 

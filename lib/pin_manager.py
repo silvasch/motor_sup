@@ -14,14 +14,11 @@ class PinManager:
     def remove_pin(self, name: str):
         del(self.__pins[name])
 
-    def on(self, name: str):
-        self.__pins[name].on()
+    def on(self, name: str, duty_cycle: float = 0):
+        self.__pins[name].on(duty_cycle)
 
     def off(self, name: str):
         self.__pins[name].off()
-
-    def set_velocity(self, name: str, velocity: float):
-        self.__pins[name].set_velocity(velocity)
 
     def all_on(self):
         for name in self.__pins:
