@@ -16,11 +16,13 @@ def main():
     )
 
     motor.forwards()
-    time.sleep(3)
-    print("Changing")
-    motor.change_duty_cylce(20)
-    time.sleep(3)
-    motor.full_stop()
+
+    try:
+        while True:
+            duty_cycle = float(input("Duty cycle: "))
+            motor.change_duty_cylce(duty_cycle)
+    except KeyboardInterrupt:
+        del(motor)
 
 
 if __name__ == "__main__":
