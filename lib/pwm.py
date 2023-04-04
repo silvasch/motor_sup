@@ -13,6 +13,3 @@ class PWM:
 
     def off(self):
         wiringpi.pwmWrite(self.__pin_num, 0)
-
-    def __del__(self):
-        gpio.cleanup()
