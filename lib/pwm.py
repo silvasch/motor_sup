@@ -8,7 +8,7 @@ class PWM:
         wiringpi.pinMode(self.__pin_num, 1)
 
     def on(self, duty_cycle: float = 100):
-        duty_cycle = (duty_cycle / 100) * 1024
+        duty_cycle = int((duty_cycle / 100) * 1024)
         wiringpi.pwmWrite(self.__pin_num, duty_cycle)
 
     def off(self):
