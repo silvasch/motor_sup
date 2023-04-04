@@ -6,7 +6,7 @@ class Motor:
     def __init__(self, data_1: int, data_2: int, enable: int, frequency: int = 100):
         self.__data_1 = Pin(data_1)
         self.__data_2 = Pin(data_2)
-        self.__enable = PWM(enable, frequency)
+        self.__enable = PWM(enable)
 
     def forwards(self, duty_cycle: float = 100):
         self.__enable.on(duty_cycle)
