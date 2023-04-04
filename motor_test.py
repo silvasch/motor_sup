@@ -15,14 +15,11 @@ def main():
         frequency=2000,
     )
 
-    motor.forwards()
-
-    try:
-        while True:
-            duty_cycle = float(input("Duty cycle: "))
-            motor.change_duty_cylce(duty_cycle)
-    except KeyboardInterrupt:
-        del(motor)
+    motor.forwards(100)
+    time.sleep(5)
+    motor.forwards(50)
+    time.sleep(5)
+    motor.stop()
 
 
 if __name__ == "__main__":

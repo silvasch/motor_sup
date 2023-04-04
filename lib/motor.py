@@ -28,5 +28,3 @@ class Motor:
         self.__data_2.on()
         self.__enable.on()
 
-    def change_duty_cylce(self, duty_cycle: float):
-        self.__enable.set_duty_cycle(duty_cycle)
