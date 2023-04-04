@@ -13,7 +13,7 @@ def main():
     motor = Motor(
         data_1=2,
         data_2=3,
-        enable=18,
+        enable=12,
     )
 
     motor.forwards()
