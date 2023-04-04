@@ -3,7 +3,7 @@ from .pwm import PWM
 
 
 class Motor:
-    def __init__(self, data_1: int, data_2: int, enable: int, frequency: int = 100):
+    def __init__(self, data_1: int, data_2: int, enable: int):
         self.__data_1 = Pin(data_1)
         self.__data_2 = Pin(data_2)
         self.__enable = PWM(enable)
