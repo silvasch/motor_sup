@@ -6,7 +6,7 @@ from lib import Motor
 
 
 def main():
-    wiringpi.wiringPiSetup()
+    wiringpi.wiringPiSetupGpio()
     gpio.setmode(gpio.BCM)
     gpio.setwarnings(False)
 
