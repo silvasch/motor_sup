@@ -9,7 +9,6 @@ class PWM:
 
     def on(self, duty_cycle: float = 100):
         duty_cycle = int((duty_cycle / 100) * 1024)
-        print(duty_cycle)
         wiringpi.pwmWrite(self.__pin_num, duty_cycle)
 
     def off(self):
