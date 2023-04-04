@@ -1,10 +1,12 @@
 import RPi.GPIO as gpio
 import time
+import wiringpi
 
 from lib import Motor
 
 
 def main():
+    wiringpi.wiringPiSetup()
     gpio.setmode(gpio.BCM)
     gpio.setwarnings(False)
 
