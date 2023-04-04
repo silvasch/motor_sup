@@ -16,9 +16,9 @@ def main():
         enable=18,
     )
 
-    motor.forwards(100)
+    motor.forwards()
     time.sleep(5)
-    motor.forwards(50)
+    motor.forwards()
     time.sleep(5)
     motor.stop()
 
