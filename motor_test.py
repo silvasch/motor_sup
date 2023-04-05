@@ -6,14 +6,12 @@ from lib import Motor
 
 
 def main():
-    wiringpi.wiringPiSetupPhys()
-    gpio.setmode(gpio.BCM)
-    gpio.setwarnings(False)
+    wiringpi.wiringPiSetup()
 
     motor = Motor(
         data_1=2,
         data_2=3,
-        enable=32,
+        enable=18,
     )
 
     motor.forwards()

@@ -1,17 +1,17 @@
-import RPi.GPIO as gpio
+import wiringpi
 
 
 class Pin:
     def __init__(self, pin_num: int):
         self.__pin_num = pin_num
 
-        gpio.setup(self.__pin_num, gpio.OUT)
+        wiringpi.pinMode(self.__pin_num, 1)
 
     def on(self):
-        gpio.output(self.__pin_num, gpio.HIGH)
+        wiringpi.digitalWrite(self.__pin_num, 1)
 
     def off(self):
-        gpio.output(self.__pin_num, gpio.LOW)
+        wiringpi.digitalWrite(self.__pin_num, 0)
 
     def __del__(self):
         gpio.cleanup()
