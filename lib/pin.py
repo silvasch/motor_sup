@@ -13,5 +13,3 @@ class Pin:
     def off(self):
         wiringpi.digitalWrite(self.__pin_num, 0)
 
-    def __del__(self):
-        gpio.cleanup()
