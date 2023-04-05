@@ -5,7 +5,7 @@ class PWM:
     def __init__(self, pin_num: int) -> None:
         self.__pin_num = pin_num
 
-        wiringpi.pinMode(self.__pin_num, 1)
+        wiringpi.pinMode(self.__pin_num, 2)
 
     def on(self, duty_cycle: float = 100):
         duty_cycle = int((duty_cycle / 100) * 1024)
