@@ -6,15 +6,15 @@ class Motor:
     def __init__(self, data_1: int, data_2: int, enable: int):
         self.__data_1 = Pin(data_1)
         self.__data_2 = Pin(data_2)
-        self.__enable = Pin(enable)
+        self.__enable = PWM(enable)
 
     def forwards(self, duty_cycle: float = 100):
-        self.__enable.on()
+        self.__enable.on(duty_cycle)
         self.__data_1.on()
         self.__data_2.off()
 
     def backwards(self, duty_cycle: float = 100):
-        self.__enable.on()
+        self.__enable.on(duty_cycle)
         self.__data_1.off()
         self.__data_2.on()
 

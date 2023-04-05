@@ -18,6 +18,8 @@ def main():
 
     motor.forwards()
     time.sleep(5)
+    motor.stop()
+    time.sleep(2)
     motor.forwards()
     time.sleep(5)
     motor.stop()
