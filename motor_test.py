@@ -5,7 +5,7 @@ import lib
 
 
 def main():
-    gpio.setmode(gpio.BOARD) # type: ignore
+    gpio.setmode(gpio.BCM) # type: ignore
 
     motor = lib.Motor(
         data_1=2,
